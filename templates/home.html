@@ -1,0 +1,130 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="all">
+        <div class="header">
+            <div>
+                <h2>KeremetKyrGyzstan</h2>
+            </div>
+            {% if user.is_authenticated %}
+            <div>
+                <a href="#best_turs">Лушие туры</a>
+                <a href="#best_hotel">Лушие отели</a>
+                <a href="#review">Отзывы</a>
+                <a href="#about_us">О нас</a>
+                <h3>{{ user.username }}</h3>
+                <form class="form_control" method="POST" action="{% url 'logoutuser' %}">
+                            {% csrf_token %}
+                            <button type="submit">Выйти</button>
+                </form>
+            </div>
+            {% else %}
+            <div>
+                <a href="{% url 'signupuser' %}">Регистрация</a>
+                <a href="{% url 'signinuser' %}">Войти</a>
+                <a href="#about_us">О нас</a>
+
+
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="body">
+            <div class="baner">
+                <form class="form_container">
+                    <h1><p>Добро пожаловать!</p></h1>
+                    <h2>Уважаемый, {{ user.username }}</h2>
+                </form>
+                <div>
+                    <img
+                        src="https://thumbs.dreamstime.com/b/снежный-барс-на-фоне-горных-вершин-векторная-иллюстрация-хищный-227611788.jpg"
+                        alt="ilbirs"/>
+                </div>
+            </div>
+
+            <div class="content" id="best_turs">
+                <h1 class="titil">Лучшие туры</h1>
+                {% for t in tours %}
+                <div class="img_block">
+                    <div>
+                        <img
+                            src="{{ t.image.url }}"/>
+                    </div>
+                    <div>
+                        <h1>{{ t.title }}</h1>
+                        <span class="desc">{{ t.description }}</span>
+                        <br/>
+                        <h6><span class="price">Цена:{{ t.price }}</span></h6>
+                        <br/>
+                        <button>Участвовать в туре</button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <br><br><br>
+            <div id="best_hotel" class="best_hotels">
+                <h1>Лучшие отели</h1>
+                <p>Лучшие предложения для вашего отдыха!</p>
+
+                <div class="container">
+                    {% for h in hotels %}
+                    <div class="card">
+                        <div class="img">
+                            <img src="{{ h.image.url }}"/>
+                        </div>
+                        <div class="card_desc">
+                            <div class="name">{{ h.title }}</div>
+                            <span>{{ h.address }}</span>
+                            <div class="day">
+                                {{ h.description }}
+                            </div>
+                            <div class="price_hotel">
+                                {{ h.price }}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+
+
+            <div id="review" class="container_review">
+                <h1>Отзывы</h1>
+
+                <div  class="review">
+
+                    {% for r in reviews %}
+                    <div class="card_review">
+                        <div class="img_review"><img
+                            src="{{ r.image.url }}"/>
+                        </div>
+                        <div class="name_review">
+                            {{ r.name }}
+                        </div>
+                        <p>Моя оценка: {{ r.grade }}/10</p>
+                        <div class="desc_review">
+                            {{ r.review }}
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+
+            <div class="block" id="about_us">
+                <h1>О нас</h1>
+                <span> Наша команда всегда рада предостовлять людям условие для путишествий в нашей стране. Мы вам с удовольствием в этом поможем!
+                    Что может быть интереснее и прекраснее, чем познание нового, неизведанного, чем безопасно и грамотно провести время изучая новую страну, и чужую традицию. Расстояния в наш век стремительно сокращаются, становятся все более незаметными.
+                    <br/><br/>
+                    Обращаясь в «Караван», Вы получаете целый комплекс туристических услуг, а значит – экономите время, деньги и нервы.
+                    Наше агентство организует групповые и индивидуальные туры, комбинированные, деловые и экскурсионные поездки, а также отдых в Кыргызстане.</span>
+            </div>
+
+
+        </div>
+    </div>
+
+{% endblock %}

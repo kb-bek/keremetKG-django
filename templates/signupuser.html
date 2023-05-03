@@ -1,0 +1,54 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <div class="all">
+        <div class="header">
+            <div>
+                <h2>KeremetKyrGyzstan</h2>
+            </div>
+            <div>
+                <a href="{% url 'main' %}">Главная</a>
+                <a href="{% url 'signupuser' %}">Регистрация</a>
+                <a href="{% url 'signinuser' %}">Войти</a>
+
+            </div>
+        </div>
+        {% if error %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+        {% endif %}
+        <div class="body">
+            <div class="baner">
+                <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Логин</label>
+                    <input type="text" name="username" class="form-control" id="username" aria-describedby="usernameHelp">
+                    <small id="usernameHelp" class="form-text text-muted">Your username must be unique. We'll let you know if someone has taken it already.</small>
+                </div>
+                <div class="form-group">
+                    <label for="password1">Пароль</label>
+                    <input type="password" name="password1" class="form-control" id="password1">
+                </div>
+                <div class="form-group">
+                    <label for="password2">Подтвердите пароль</label>
+                    <input type="password" name="password2" class="form-control" id="password2">
+                </div>
+                    <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                </form>
+
+
+                <div>
+                    <img
+                        src="https://thumbs.dreamstime.com/b/снежный-барс-на-фоне-горных-вершин-векторная-иллюстрация-хищный-227611788.jpg"
+                        alt="ilbirs"/>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,396 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+
+.all {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background: #0986e4;
+}
+
+.header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 8px;
+}
+
+.header div a {
+    margin: 0 25px;
+    border: none;
+    background: none;
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+
+.header div button:hover{
+    background: #0b7bcf;
+}
+
+.baner {
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+
+
+.baner div:first-child {
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+}
+
+
+
+.form_control{
+    margin: 10px 0;
+}
+
+.baner div:last-child{
+    padding-top: 30px;
+    padding-right: 30px;
+    width: 50%;
+}
+.baner div:last-child img{
+    width: 100%;
+}
+
+
+
+.baner div:last-child div:last-child button {
+    height: 54px;
+}
+
+.baner div:last-child div:last-child button:first-child {
+    width: 130px;
+}
+
+.baner div:last-child div:last-child button:last-child {
+    width: 260px;
+}
+
+.baner div:first-child img {
+    width: 100%;
+    height: 100%;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titil{
+    border-top:solid darkgrey 1px ;
+    width:70%;
+    margin-top: 150px;
+    font-size: 50px;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 0;
+}
+.block h1{
+    font-weight: lighter;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.block {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 94%;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+
+.content .img_block {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.content .alt_img_block {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.content .block h1 {
+    font-size: 40px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.content .block span {
+    font-size: 24px;
+    text-align: center;
+    font-weight: lighter;
+    width: 80%;
+}
+
+
+.content .img_block div:first-child {
+    width: 40%;
+}
+
+.content .img_block div:first-child img {
+    width: 100%;
+    height: 100%;
+}
+
+.content .img_block div:last-child {
+    width: 50%;
+}
+
+.content .img_block div:last-child button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: 17px;
+}
+
+.content .img_block div:last-child h1 {
+    font-size: 40px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+
+
+.content .img_block div:last-child span {
+    font-size: 24px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.content .alt_img_block div:last-child {
+    width: 40%;
+}
+.content .alt_img_block div:last-child button{
+    width: 70%;
+    border:none ;
+}
+
+.content .alt_img_block div:last-child img {
+    width: 100%;
+    height: 100%;
+}
+
+.content .alt_img_block div:first-child {
+    width: 50%;
+}
+
+.content .alt_img_block div:first-child h1 {
+    font-size: 50px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.content .alt_img_block div:first-child span {
+    font-size: 24px;
+    text-align: center;
+    font-weight: lighter;
+}
+.content .alt_img_block div:first-child button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: 17px;
+}
+.footer {
+    margin-top: 70px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #2a2a2a;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.colum {
+    width: 30%;
+    margin-left: 60px;
+}
+
+.colum .title {
+    color: #656565;
+    font-size: 20px;
+}
+
+.colum .var {
+    margin-top: 25px;
+    color: #ffffff;
+}
+
+.best_hotels{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 69%;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    border: 1px black solid;
+    height: 200px;
+    width: 595px;
+    padding: 3px;
+    margin-left: 14px;
+}
+
+.img{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.img img{
+    width: 100%;
+}
+
+.card_desc{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.name{
+    font-size: 25px;
+
+}
+
+.day{
+    margin-top: 25px;
+    height: 50px;
+    width: 360px;
+    font-size: 20px;
+    color: darkgray;
+}
+
+.price_hotel{
+    margin-top: 25px;
+    font-size: 24px;
+    text-align: end;
+}
+
+.container_review{
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 77%;
+}
+
+.review {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card_review{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    border-radius: 50px;
+    border: 1px solid black;
+    box-shadow: 0px 4px 5px 0px #313535;
+    height: 300px;
+    margin-top: 25px;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.card_review p{
+    color: #00ff16de;
+    text-shadow: 0px 1px 0px black;
+}
+
+.name_review{
+    font-size: 25px;
+    color: #008cff;
+    text-shadow: 0px 1px 0px black;
+}
+
+
+.img_review{
+    height: 100px;
+    border-radius: 100px;
+}
+
+.img_review img{
+    height: 100%;
+    border-radius: 100px;
+}
+
+.desc_review{
+    font-size: 19px;
+    text-align: center;
+    font-weight: 500;
+
+}

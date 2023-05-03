@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <title>KeremetKG</title>
+</head>
+<body>
+
+
+    <div class="all">
+        {% block content %}{% endblock %}
+        <div class="footer">
+            <div class="colum">
+                <div class="title">Наши адреса:</div>
+                <div class="var">
+                    <p>Калык акиева 100\4.</p>
+                    <p>Уметалиева 35\а.</p>
+                    <p>Ден сяопина 64.</p>
+                    <p>Дордой плаза 4 этаж.</p>
+                    <p>Баха/ гагарина 55.</p>
+                </div>
+            </div>
+            <div class="colum">
+                <div class="title">Наши соцсети</div>
+                <div class="var">
+                    <p>instagramm:@Joomart_off</p>
+                    <p>Facebook:JoomartTurumov</p>
+                    <p>Tiktok:adikkamilzhanov</p>
+                    <p>Odnoklassniki:Adiletbek</p>
+                    <p>Telegramm:@Zhoomart</p>
+                </div>
+            </div>
+            <div class="colum">
+                <div class="title">Связаться с нами</div>
+                <div class="var">
+                    <p>+996(704)272524</p>
+                    <p>w/a +996(704)300644</p>
+                    <p>41-04-54</p>
+                    <p>email:@Jomakrasava</p>
+                    <p>sms:03010203</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
